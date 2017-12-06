@@ -1,34 +1,39 @@
+* {
+	/* defines width and height of an element : include padding + border + content in element's total width and heigth*/
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
-		/* fallback for old browsers */
-	background: #D3959B;  
-	/* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background: -webkit-linear-gradient(left, #BFE6BA, #D3959B);
-	background: -o-linear-gradient(left, #BFE6BA, #D3959B);
-	background: linear-gradient(to right, #BFE6BA, #D3959B);
+	background: white;
 	font-family:'Questrial', sans-serif;
 }
 
 nav {
 	margin: 0;
 	color: white;
-	background-color: black;	
+	background-color: #24292e;	
+	z-index: 1;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 14px;
+	display: block;
 }
 
 nav ul {
 	display: flex;
-	padding: 0;
+	padding-right: 20px;
+	padding-left: 20px;
 	list-style: none;
-	
-	margin: 0;
-
-	height: 60px;
+	margin-top: 0;
+	margin-bottom: 0;
 	/* aligns everything in center on vertical axis*/
 	align-items: center;
+}
 
-	/*1em T & B - 3em R & L */
-	padding: 1em 3em; 
-	background-color: black;
+nav ul li {
+	font-size: 14px;
+	font-weight: 600;
 }
 
 #logo {
@@ -40,7 +45,6 @@ nav ul {
 	/* both margin autos center text in the middle of nav bar */
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 2em;
 	letter-spacing: .2em;
   word-spacing: .2em
 }
@@ -48,35 +52,41 @@ nav ul {
 #text a:link, a:hover, a:visited, a:active {
 	text-decoration: none;
 	color: white;
+	background-color: transparent;
 }
 
 #search_box{
-	border-radius: .2em;
+	padding-left: 8px;
+	padding-right: 8px;
+	line-height: 20px;
+	vertical-align: middle;
+	width: 300px;
+	font-size: 13px;
+	min-height: 30px;
+	font-weight: normal;
 	border: none;
-	height: 1.5em;
-
+	box-shadow: none;
+	border-radius: 3px;
+	outline: none;
 	/* create space between box and button */
 	margin-right: .25em;
-	background-color: gray;
+	background-color: #313438;
 
 	/* text inputed by user is white */
 	color: white;
-	font-size: 2em;
 
 	/*0 T & B - 1em R & L */
-	padding: 0 .25em;
+/*	padding: 0 .25em;*/
 }
 
 input::placeholder {
-  color: #D3D3D3;
-  font-style: italic;
+  color: #707275;
 }
 
 #button_id {
 	background-color: white;
 	border: none;
 	color: black;
-	font-size: 1.25em;
 	border-radius: .4em;
 }
 
